@@ -21,7 +21,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <GenreList genre={Object.keys(movies)} handleClick={this._setGenre} />
-        <MovieList movies={Object.keys(movies.documentaries)} />
+        {this.state.genre? <MovieList movies={Object.keys(movies[this.state.genre])} /> : null}
         <ActorList actors={movies.documentaries.robocop} />
       </div>
     );
