@@ -12,7 +12,7 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      
+      genre: ''
     }
   }
 
@@ -20,11 +20,18 @@ class App extends React.Component {
     // console.log(Object.keys(movies))
     return (
       <div className="App">
-        <GenreList genre={Object.keys(movies)} />
+        <GenreList genre={Object.keys(movies)} handleClick={this._setGenre} />
         <MovieList movies={Object.keys(movies.documentaries)} />
         <ActorList actors={movies.documentaries.robocop} />
       </div>
     );
+  }
+  _setGenre = (genre) => {
+    console.log(`the genre is ${genre}`);
+    this.setState({
+      // genre:genre (if key and value are the same word, you can omit colon and second word)
+      genre
+    });
   }
 }
 

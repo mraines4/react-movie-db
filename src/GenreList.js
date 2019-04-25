@@ -6,10 +6,11 @@ function GenreList(props) {
         <ul>
             {
                 props.genre.map((genre, i) => {
-                console.log(genre);
+                // console.log(genre);
                 return <li key={i}>
                     <a href="#" onClick={() => {
-                        console.log(genre);
+                        // console.log(genre);
+                        props.handleClick(genre);
                     }}>
                         {genre}
                     </a>
