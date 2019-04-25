@@ -9,7 +9,7 @@ function App() {
   console.log(movies)
   return (
     <div className="App">
-      <GenreList genres={} />
+      <GenreList />
     </div>
   );
 }
