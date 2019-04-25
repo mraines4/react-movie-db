@@ -5,7 +5,16 @@ function GenreList(props) {
     return (
         <ul>
             {
-                props.genre.map((genre, i) => <li key={i}>{genre}</li>)
+                props.genre.map((genre, i) => {
+                console.log(genre);
+                return <li key={i}>
+                    <a href="#" onClick={() => {
+                        console.log(genre);
+                    }}>
+                        {genre}
+                    </a>
+                </li>
+            })
             }
         </ul>
     );
