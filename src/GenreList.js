@@ -1,12 +1,12 @@
 import React from 'react';
 
-import movies from './movies'
 
 function GenreList(props) {
-    console.log(Object.keys(movies))
     return (
         <ul>
-
+            {
+                props.genre.map((genre, i) => <li key={i}>{genre}</li>)
+            }
         </ul>
     );
 }
